@@ -1,0 +1,110 @@
+<!-- Layers -->
+<%= stylesheet_link_tag "application", :media => "all" %>
+<%= javascript_include_tag "assets/javascripts/jquery-2.1.1.js", "assets/javascripts/highcharts.js", 'application', "chartkick", 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+
+<div class="row">
+
+  <div class="col-lg-11">
+    <div class="rowCustom">
+      <div class="col-lg-4 alignButtons">
+        <a href="\outputpower">
+          <%= column_chart MvOutputpower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:value), height: "180px", colors: ["red", "#999"] %>
+        </a>
+        <div><label>Transformer Output Power</label></div>
+      </div>
+      <div class="col-lg-4 alignButtons">
+        <a href="\daily_energy">
+          <%= column_chart MvCurrent.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:mv1), height: "180px", colors: ["red", "#999"] %>
+        </a>
+        <div><label>Daily Output Energy</label></div>
+      </div>
+      <div class="col-lg-4 alignButtons">
+        <a href="\pr_ratio">
+          <%= column_chart MvCurrent.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:mv2), height: "180px", colors: ["red", "#999"] %>
+        </a>
+        <div><label>PR Ratio</label></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-1 alignButtons">
+    <div class="secondColumnCustom">
+      <div id="secondColumn">
+        <ul>
+          <li>
+            <a href="/mvs" class="viewAll">viewAll</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div><!-- End of row -->
+
+<div class="row">
+
+  <div class="col-md-11">
+    <div class="rowCustom">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 alignButtons">
+        <a href="/lv">
+          <%= column_chart LvActivepower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:value), height: "180px" %>
+        </a>
+        <div><label>Low-Voltage Electric Panel</label></div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+
+  <div class="col-md-1">
+  </div>
+
+</div><!-- End of row -->
+
+<div class="row">
+
+  <div class="col-lg-11">
+    <div class="rowCustom">
+      <div class="col-lg-3 alignButtons">
+        <a href="/array11">
+          <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+        </a>
+        <div><label>Array01</label></div>
+      </div>
+      <div class="col-lg-3 alignButtons">
+        <a href="/array12">
+          <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+        </a>
+        <div><label>Array02</label></div>
+      </div>
+      <div class="col-lg-3 alignButtons">
+        <a href="/array13">
+          <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+        </a>
+        <div><label>Array03</label></div>
+      </div>
+      <div class="col-lg-3 alignButtons">
+        <a href="/array11">
+          <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+        </a>
+        <div><label>Array04</label></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-1 alignButtons">
+    <div class="secondColumnCustom">
+    <div id="secondColumn">
+      <ul>
+        <li>
+            <a href="/arrays" class="viewAll">viewAll</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+</div><!-- End of row -->
+
+</div><!-- End of container -->

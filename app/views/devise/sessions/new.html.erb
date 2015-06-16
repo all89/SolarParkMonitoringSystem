@@ -1,0 +1,92 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-6">
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+          </br></br></br></br></br>
+
+          <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-2">
+              <img src="/assets/emailLbl.jpg" alt="emailLbl" width="128" height="35">
+            </div>
+            <div class="col-md-2Login">
+              <%= f.email_field :email, autofocus: true %>
+            </div>
+          </div>
+          </br></br>
+          <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-2">
+              <img src="/assets/passLbl.jpg" alt="passLbl" width="128" height="35">
+            </div>
+            <div class="col-md-2Login">
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <% if devise_mapping.rememberable? -%>
+                  <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+              <% end -%>
+            </div>
+          </div>
+          </br>
+          <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <input class="btn btn-primary" type="submit" value="LOGIN" style="width:120px">
+            </div>
+          </div>
+
+      <% end %>
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-4">
+
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+
+    </div> <!-- col-lg-6 -->
+
+    <div class="col-lg-6">
+      </br></br></br></br></br></br></br>
+      <div class="row">
+        <img src="/assets/logo.jpg" alt="logo" width="494" height="150">
+      </div>
+    </div>
+
+  </div> <!-- Row -->
+
+  </br></br>
+  <div class="row">
+    <hr>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-5">
+    </div>
+    <div class="col-lg-6">
+      <img src="/assets/copyright.JPG" alt="copy" width="186" height="25">
+    </div>
+  </div>
+  </br></br>
+</div> <!-- Container -->
+

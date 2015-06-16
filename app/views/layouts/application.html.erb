@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Solar Park Monitoring System</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="/assets/content.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+<!-- Navigation Bar -->
+<div class="container navigationHeader">
+  <% if user_signed_in? %>
+      <div class="col-lg-8">
+        <div id="navigationMenu">
+          <ul>
+            <li id="home">
+            </li>
+            <li>
+              <a href="/general_info" class="info">info</a>
+            </li>
+            <li>
+              <a href="/" class="park">park</a>
+            </li>
+            <li>
+              <a href="/meteorological_parameters" class="temps">temps</a>
+            </li>
+            <li>
+              <a href="admin/users" onclick="this.target='_blank'" class="dashboard">dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <br />
+        <strong><%= current_user.email %></strong><br />
+        <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      </div>
+      <div class="col-lg-1">
+        <br /><br />
+        <div class="row alignButtons"><span id=tick2></span></div>
+        <div class="row alignButtons time"><%= Time.now.strftime("%m/%d/%Y") %></div>
+      </div>
+  <% else %>
+      <div class="col-lg-4">
+        <div id="navigationMenu">
+          <ul>
+            <li id="home">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <span id="welcome">Welcome</span>
+      </div>
+      <div class="col-lg-1">
+        <br /><br />
+        <div class="row alignButtons"><span id=tick2></span></div>
+        <div class="row alignButtons time"><%= Time.now.strftime("%m/%d/%Y") %></div>
+      </div>
+  <% end %>
+
+</div>
+
+<br/>
+
+<div class="container mainView">
+
+  <div class="row">
+    <%= yield %>
+  </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/application.js"></script>
+<script src="/assets/highcharts.js"></script>
+
+<script>
+    function show2(){
+        if (!document.all&&!document.getElementById)
+            return
+        thelement=document.getElementById? document.getElementById("tick2"): document.all.tick2
+        var Digital=new Date()
+        var hours=Digital.getHours()
+        var minutes=Digital.getMinutes()
+        var seconds=Digital.getSeconds()
+        var dn="PM"
+        if (hours<12)
+            dn="AM"
+        if (hours>12)
+            hours=hours-12
+        if (hours==0)
+            hours=12
+        if (minutes<=9)
+            minutes="0"+minutes
+        if (seconds<=9)
+            seconds="0"+seconds
+        var ctime=hours+":"+minutes+":"+seconds+" "+dn
+        thelement.innerHTML="<b style='font-size:14;color:#669ec1;;'>"+ctime+"</b>"
+        setTimeout("show2()",1000)
+    }
+    window.onload=show2
+    //-->
+</script>
+
+
+</body>
+</html>
+

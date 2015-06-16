@@ -1,0 +1,79 @@
+<%= form_for @general_info do |general_infos| %>
+
+    <div class="container">
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Name and location:</span>
+        </div>
+        <div class="col-md-4">
+          <%= general_infos.text_field :name %>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Number of solar panels per string:</span>
+        </div>
+        <div class="col-md-4">
+          <%= general_infos.text_field :solar_panels %>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Nominal power of solar panel applied:</span>
+        </div>
+        <div class="col-md-4">
+          <%= general_infos.text_field :nominal_power %>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Number of string inverters applied:</span>
+        </div>
+        <div class="col-md-4">
+          <%= general_infos.text_field :string_inverters %>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Nominal power of string inverters:</span>
+        </div>
+        <div class="col-md-4">
+          <%= general_infos.text_field :nominal_inverter %>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Number of strings per string inverter:</span>
+        </div>
+        <div class="col-md-4">
+          <%= general_infos.text_field :number_per_inverter %>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Price of energy sold to the grid:</span>
+        </div>
+        <div class="col-md-4">
+          <%= general_infos.text_field :price %>
+        </div>
+      </div>
+      <div class="rowInfos">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+
+        <div class="col-md-4">
+          <%= general_infos.submit %>
+        </div>
+      </div>
+
+<% end %>
+</div>

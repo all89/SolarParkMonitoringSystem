@@ -1,0 +1,152 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
+<%= javascript_include_tag "assets/javascripts/jquery-2.1.1.js", "assets/javascripts/highcharts.js", "assets/javascripts/modules/exporting.js", 'application', "chartkick", 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+<br />
+<br />
+<div class="container">
+
+  <p>
+    Download:
+    <%= link_to "CSV", lv_path(format: "csv") %> |
+    <%= link_to "Excel", lv_path(format: "xls") %>
+  </p>
+
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-9">
+      <button id="day3" class="btn btn-default">March 3</button>
+      <button id="day4" class="btn btn-default">March 4</button>
+      <button id="day5" class="btn btn-default">March 5</button>
+      <button id="day6" class="btn btn-default">March 6</button>
+      <button id="day7" class="btn btn-default">March 7</button>
+      <button id="day8" class="btn btn-default">March 8</button>
+      <button id="day9" class="btn btn-default">March 9</button>
+      <button id="weekly" class="btn btn-default">Weekly</button>
+      <button id="monthly" class="btn btn-default">Monthly</button>
+    </div>
+  </div><br />
+  <div class="row buttonBorder"></div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-1 paramBorder"><br/><br />
+
+    </div>
+    <div class="col-lg-10">
+      <div class="power">
+        <div class="graphWeek"><%= line_chart @weekly_graph %></div>
+        <div class="graphDay3"><%= line_chart @day3_graph %></div>
+        <div class="graphDay4"><%= line_chart @day4_graph %></div>
+        <div class="graphDay5"><%= line_chart @day5_graph %></div>
+        <div class="graphDay6"><%= line_chart @day6_graph %></div>
+        <div class="graphDay7"><%= line_chart @day7_graph %></div>
+        <div class="graphDay8"><%= line_chart @day8_graph %></div>
+        <div class="graphDay9"><%= line_chart @day9_graph %></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+    $('.graphDay3, .graphDay4, .graphDay5, .graphDay6, .graphDay7, .graphDay8, .graphDay9').addClass('hiddenCustom');
+    $(document).ready(function(){
+        $('#day9').click(function(){
+            $('.graphDay9').show();
+            $('.graphDay3').hide();
+            $('.graphDay4').hide();
+            $('.graphDay5').hide();
+            $('.graphDay6').hide();
+            $('.graphDay7').hide();
+            $('.graphDay8').hide();
+            $('.graphWeek').hide();
+        });
+
+        $('#day8').click(function(){
+            $('.graphDay8').show();
+            $('.graphDay3').hide();
+            $('.graphDay4').hide();
+            $('.graphDay5').hide();
+            $('.graphDay6').hide();
+            $('.graphDay7').hide();
+            $('.graphDay9').hide();
+            $('.graphWeek').hide();
+        });
+
+        $('#day7').click(function(){
+            $('.graphDay7').show();
+            $('.graphDay3').hide();
+            $('.graphDay4').hide();
+            $('.graphDay5').hide();
+            $('.graphDay6').hide();
+            $('.graphDay8').hide();
+            $('.graphDay9').hide();
+            $('.graphWeek').hide();
+        });
+
+        $('#day6').click(function(){
+            $('.graphDay6').show();
+            $('.graphDay3').hide();
+            $('.graphDay4').hide();
+            $('.graphDay5').hide();
+            $('.graphDay7').hide();
+            $('.graphDay8').hide();
+            $('.graphDay9').hide();
+            $('.graphWeek').hide();
+        });
+
+        $('#day5').click(function(){
+            $('.graphDay5').show();
+            $('.graphDay3').hide();
+            $('.graphDay4').hide();
+            $('.graphDay6').hide();
+            $('.graphDay7').hide();
+            $('.graphDay8').hide();
+            $('.graphDay9').hide();
+            $('.graphWeek').hide();
+        });
+
+        $('#day4').click(function(){
+            $('.graphDay4').show();
+            $('.graphDay3').hide();
+            $('.graphDay5').hide();
+            $('.graphDay6').hide();
+            $('.graphDay7').hide();
+            $('.graphDay8').hide();
+            $('.graphDay9').hide();
+            $('.graphWeek').hide();
+        });
+
+        $('#day3').click(function(){
+            $('.graphDay3').show();
+            $('.graphDay4').hide();
+            $('.graphDay5').hide();
+            $('.graphDay6').hide();
+            $('.graphDay7').hide();
+            $('.graphDay8').hide();
+            $('.graphDay9').hide();
+            $('.graphWeek').hide();
+        });
+
+        $('#weekly').click(function(){
+            $('.graphWeek').show();
+            $('.graphDay3').hide();
+            $('.graphDay4').hide();
+            $('.graphDay5').hide();
+            $('.graphDay6').hide();
+            $('.graphDay7').hide();
+            $('.graphDay8').hide();
+            $('.graphDay9').hide();
+        });
+
+        $('#monthly').click(function(){
+            $('.graphWeek').hide();
+            $('.graphDay3').hide();
+            $('.graphDay4').hide();
+            $('.graphDay5').hide();
+            $('.graphDay6').hide();
+            $('.graphDay7').hide();
+            $('.graphDay8').hide();
+            $('.graphDay9').hide();
+        });
+    });
+</script>

@@ -1,0 +1,23 @@
+<h1>Listing mv_voltages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mv_voltages.each do |mv_voltage| %>
+      <tr>
+        <td><%= link_to 'Show', mv_voltage %></td>
+        <td><%= link_to 'Edit', edit_mv_voltage_path(mv_voltage) %></td>
+        <td><%= link_to 'Destroy', mv_voltage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mv voltage', new_mv_voltage_path %>

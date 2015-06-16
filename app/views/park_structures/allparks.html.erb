@@ -1,0 +1,45 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
+<%= javascript_include_tag "assets/javascripts/jquery-2.1.1.js", "assets/javascripts/highcharts.js", 'application', "chartkick", 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+
+<br/><br/><br/><br/>
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-1"></div>
+    <div class="col-lg-4 " id="parkOne">
+        <div class="row">
+            <div class="col-lg-6">
+                <%= column_chart MvOutputpower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:value), height: "230px", colors: ["red", "#999"] %>
+            </div>
+            <div class="col-lg-6"><br/><br/><br/>
+                <div class="row parkOneFont">Thermiventures Solar Park</div>
+                <div class="row"><a href="/structure" class="hrefFont">Click here to view the park!</a></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-10">
+              <% @lv.each do |lv| %>
+                  <span class="lvFont">Low-Voltage Active Power: <span class="parkOneFont"> <%= lv.value.to_i %> V</span></span>
+              <% end %>
+            </div>
+        </div><br/>
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-10">
+              <% @panel_temp.each do |panel_temp| %>
+                    <span class="lvFont">Local Solar Panel Temperature: <span class="parkOneFont"> <%= panel_temp.panel_temp.to_i %> &deg;C</span></span>
+              <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-4" id="parkTwo"></div>
+    <div class="col-lg-1"></div>
+
+
+  </div><!-- End of row -->
+
+</div><!-- End of container -->

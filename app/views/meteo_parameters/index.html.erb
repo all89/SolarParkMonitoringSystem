@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-4Meteo">
+
+    <div class="col-md-6Meteo">
+
+      <% @irradiation.each do |irradiance| %>
+          <h1 class="meteoData"><%= irradiance.irradiation.to_i %> w/m2</h1>
+      <% end %>
+
+    </div>
+
+  </div>
+
+  <div class="col-md-4Meteo">
+
+    <div class="col-md-6Meteo">
+
+      <% @ambient_temp.each do |ambient| %>
+          <h1 class="meteoData"><%= ambient.ambient_temp.to_i %> &deg;C</h1>
+      <% end %>
+
+    </div>
+
+  </div>
+  <div class="col-md-4Meteo">
+
+    <div class="col-md-6Meteo">
+
+      <% @panel_temp.each do |ambient| %>
+          <h1 class="meteoData"><%= ambient.panel_temp.to_i %> &deg;C</h1>
+      <% end %>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="row alignButtons">
+  <div class="col-md-4">
+    <img src="/assets/Irradiance.png" />
+  </div>
+  <div class="col-md-4">
+    <img src="/assets/AmbientTemp.png" />
+  </div>
+  <div class="col-md-4">
+    <img src="/assets/PanelTemp.png">
+  </div>
+</div>

@@ -1,0 +1,85 @@
+<% @general_infos.each do |general_infos| %>
+
+    <div class="container">
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Name and location:</span>
+        </div>
+        <div class="col-md-4">
+          <label class="labelCustom"><%= general_infos.name %></label>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Number of solar panels per string:</span>
+        </div>
+        <div class="col-md-4">
+          <label class="labelCustom"><%= general_infos.solar_panels %></label>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Nominal power of solar panel applied:</span>
+        </div>
+        <div class="col-md-4">
+          <label class="labelCustom"><%= general_infos.nominal_power %></label>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Number of string inverters applied:</span>
+        </div>
+        <div class="col-md-4">
+          <label class="labelCustom"><%= general_infos.string_inverters %></label>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Nominal power of string inverters:</span>
+        </div>
+        <div class="col-md-4">
+          <label class="labelCustom"><%= general_infos.nominal_inverter %></label>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Number of strings per string inverter:</span>
+        </div>
+        <div class="col-md-4">
+          <label class="labelCustom"><%= general_infos.number_per_inverter %></label>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+          <span class="labelInfo label-primary">Price of energy sold to the grid:</span>
+        </div>
+        <div class="col-md-4">
+          <label class="labelCustom"><%= general_infos.price %></label>
+        </div>
+      </div>
+
+      <div class="rowInfos">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4">
+
+        <% if current_user.admin? %>
+            <%= link_to 'Edit Information', edit_general_info_path(general_infos), :class=>"btn btn-info" %>
+        <% else %>
+        <% end %>
+
+      </div>
+      </div>
+<% end %>
+
+</div>

@@ -1,0 +1,2 @@
+module ArrayCurrentsHelper
+end

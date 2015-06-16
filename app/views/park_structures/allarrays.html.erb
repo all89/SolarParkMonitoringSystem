@@ -1,0 +1,327 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
+<%= javascript_include_tag "assets/javascripts/jquery-2.1.1.js", "assets/javascripts/highcharts.js", 'application', "chartkick", 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+
+<br/>
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array01</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array02</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array03</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array04</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array05</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array06</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array07</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array08</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array09</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array10</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array11</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array12</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array13</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array14</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array15</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array16</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array17</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array18</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array19</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array20</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array21</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array22</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array23</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array24</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array25</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array26</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array27</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array28</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array29</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array30</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array31</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array32</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array33</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array34</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array35</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array36</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array37</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array38</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array39</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array40</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array41</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array42</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array11">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array11), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array43</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array12">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array12), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array44</label></div>
+    </div>
+
+    <div class="col-md-3 alignButtons">
+      <a href="/array13">
+        <%= column_chart ArrayPower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:array13), height: "180px", colors: ["green", "#999"] %>
+      </a>
+      <div><label>Array45</label></div>
+    </div>
+
+  </div><!-- End of row -->
+
+</div><!-- End of container -->

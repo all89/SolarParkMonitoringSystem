@@ -1,0 +1,17 @@
+<%= form_for(@mv_outputpower) do |f| %>
+  <% if @mv_outputpower.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mv_outputpower.errors.count, "error") %> prohibited this mv_outputpower from being saved:</h2>
+
+      <ul>
+      <% @mv_outputpower.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

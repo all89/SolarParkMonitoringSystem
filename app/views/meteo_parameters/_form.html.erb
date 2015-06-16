@@ -1,0 +1,17 @@
+<%= form_for(@meteo_parameter) do |f| %>
+  <% if @meteo_parameter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meteo_parameter.errors.count, "error") %> prohibited this meteo_parameter from being saved:</h2>
+
+      <ul>
+      <% @meteo_parameter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

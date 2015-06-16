@@ -1,0 +1,17 @@
+<%= form_for(@mv_current) do |f| %>
+  <% if @mv_current.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mv_current.errors.count, "error") %> prohibited this mv_current from being saved:</h2>
+
+      <ul>
+      <% @mv_current.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
+<%= javascript_include_tag "assets/javascripts/jquery-2.1.1.js", "assets/javascripts/highcharts.js", 'application', "chartkick", 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+
+<br/>
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-4 alignButtons">
+      <a href="\mv1">
+        <%= column_chart MvCurrent.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:mv1), height: "180px", colors: ["red", "#999"] %>
+      </a>
+      <div><label>MV 1</label></div>
+    </div>
+    <div class="col-lg-4 alignButtons">
+      <a href="\mv2">
+        <%= column_chart MvCurrent.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:mv2), height: "180px", colors: ["red", "#999"] %>
+      </a>
+      <div><label>MV 2</label></div>
+    </div>
+    <div class="col-lg-4 alignButtons">
+      <a href="\mv3">
+        <%= column_chart MvCurrent.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:mv3), height: "180px", colors: ["red", "#999"] %>
+      </a>
+      <div><label>MV 3</label></div>
+    </div>
+  </div><!-- End of row -->
+
+  <br /><hr/><br />
+
+  <div class="row">
+
+    <div class="col-lg-4 alignButtons">
+      <a href="\outputpower">
+        <%= column_chart MvOutputpower.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:value), height: "180px", colors: ["red", "#999"] %>
+      </a>
+      <div><label>Transformer Output Power</label></div>
+    </div>
+    <div class="col-lg-4 alignButtons">
+      <a href="\daily_energy">
+        <%= column_chart MvCurrent.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:mv1), height: "180px", colors: ["red", "#999"] %>
+      </a>
+      <div><label>Daily Output Energy</label></div>
+    </div>
+    <div class="col-lg-4 alignButtons">
+      <a href="\pr_ratio">
+        <%= column_chart MvCurrent.where(date_time: "2014-03-09 17:15:00").group(:date_time).sum(:mv2), height: "180px", colors: ["red", "#999"] %>
+      </a>
+      <div><label>PR Ratio</label></div>
+    </div>
+
+  </div><!-- End of row -->
+
+</div><!-- End of container -->

@@ -1,0 +1,23 @@
+<h1>Listing array_voltages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @array_voltages.each do |array_voltage| %>
+      <tr>
+        <td><%= link_to 'Show', array_voltage %></td>
+        <td><%= link_to 'Edit', edit_array_voltage_path(array_voltage) %></td>
+        <td><%= link_to 'Destroy', array_voltage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Array voltage', new_array_voltage_path %>

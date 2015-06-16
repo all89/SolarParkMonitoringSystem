@@ -1,0 +1,23 @@
+<h1>Listing array_powers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @array_powers.each do |array_power| %>
+      <tr>
+        <td><%= link_to 'Show', array_power %></td>
+        <td><%= link_to 'Edit', edit_array_power_path(array_power) %></td>
+        <td><%= link_to 'Destroy', array_power, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Array power', new_array_power_path %>

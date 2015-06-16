@@ -1,0 +1,341 @@
+/*! Our custom CSS that is used in order to modify some bootstrap classes */
+
+body {
+    background: url(backGround.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navigationHeader{
+    box-shadow: 4px 4px 10px #7e7e7e;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#navigationMenu {
+    margin-top: 5px;
+    position: relative;
+}
+
+#navigationMenu ul {
+    list-style: none;
+}
+
+#navigationMenu ul li {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+}
+
+#navigationMenu #home {
+    background: url(home.png);
+    background-repeat: no-repeat;
+    width: 184px;
+    height: 78px;
+}
+
+#navigationMenu a.info {
+    background: url(info.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 90px;
+}
+
+#navigationMenu a.park {
+    background: url(park.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 90px;
+}
+
+#navigationMenu a.temps {
+    background: url(temps.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 90px;
+}
+
+#navigationMenu a.dashboard {
+    background: url(dashboard.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 90px;
+}
+
+
+#navigationMenu a {
+    display: block;
+    text-decoration: none;
+    padding-right: 3px;
+    /* text-indent: -10000px; */
+    font-size: 0px;
+    cursor: pointer;
+}
+
+#navigationMenu a:hover
+{
+    background-color:#6ea6c9;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
+}
+
+#welcome{
+    font-size: 60px;
+    font-family: Copperplate;
+    color: #669ec1;
+    font-style: italic;
+    font-weight:bold;
+}
+
+.mainView{
+    box-shadow: 4px -4px 5px #7e7e7e;
+    min-height: 550px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.alignButtons {
+    text-align: center;
+}
+
+.time {
+    color: #669ec1;
+    font-weight:bold;
+}
+
+.col-md-2Custom {
+    width: 7%;
+    position: relative;
+ 	min-height: 100px;
+  	float: left;
+  	padding-top: 12px;
+    margin-right: 50px;
+}
+
+.rowCustom {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-height: 210px;
+    border: 1px solid #d6d6d6;
+    box-shadow: 1px 0px 2px #7e7e7e;
+    border-radius: 5px;
+}
+
+.secondColumnCustom {
+    margin-top: 60px;
+    margin-left: -70px;
+    min-height: 20px;
+}
+
+.col-md-4Meteo {
+    margin-top: 100px;
+    margin-right: 20px;
+    margin-left: 60px;
+    float: left;
+    width: 25%;
+    height: 300px;
+    background-color: #f8f8f8;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 0px 1px #7e7e7e;
+    border-radius: 5px;
+}
+
+.col-md-6Meteo {
+    text-align: center;
+    margin-top: 120px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.hiddenCustom {
+    display: none;
+    min-width: 800px;
+}
+
+.meteoData {
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+.rowInfos {
+    margin-right: 15px;
+    margin-left: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 20px;
+    padding-top: 40px;
+}
+
+.labelInfo {
+    padding: .50em .50em .50em;
+    min-width: 300px;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: right;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border: 1px solid #000;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.labelCustom {
+    padding: .5em .50em .50em;
+    min-width: 200px;
+    font-size: 15px;
+    color: #000000;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border: 1px solid #000;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 5px;
+    background-color: #e2e2e2;
+}
+
+.col-md-2Login {
+    position: relative;
+    min-height: 1px;
+    margin-top: 5px;
+    margin-left: 50px;
+    float: left;
+    width: 16.666666666666664%;
+}
+
+.col-md-2LoginHeader {
+    width: 15%;
+    position: relative;
+    min-height: 100px;
+    float: left;
+    padding-top: 12px;
+    margin-right: 50px;
+}
+
+hr {
+    background-color: #545454;
+    border: 0 none;
+    height: 1px;
+    width: 100px;
+}
+
+#parkOne {
+    border: 2px solid #2063e3;
+    border-radius: 15px;
+    height: 350px;
+    text-align: center;
+    box-shadow: 4px 4px 10px #7e7e7e;
+}
+
+#parkOne:hover {
+    border: 1px solid #2063e3;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px #7e7e7e;
+}
+
+.parkOneFont {
+    color: #545454;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Lucida Bright;
+}
+
+.lvFont {
+    color: #545454;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Lucida Bright;
+}
+
+.hrefFont {
+    font-size: 14px;
+}
+
+#parkTwo {
+    border: 1px solid #ceddf9;
+    border-radius: 15px;
+    height: 350px;
+    background: url(notActive.png);
+    background-repeat: no-repeat;
+}
+
+#parameters {
+    list-style-type: none;
+}
+
+#parameters #power {
+    min-width: 120px;
+}
+
+#parameters #current{
+    min-width: 120px;
+}
+
+#parameters #voltage{
+    min-width: 120px;
+}
+
+.paramBorder {
+    border-right: thick double #e4e4e4;
+    height: 350px;
+}
+
+.buttonBorder {
+    border-bottom: thick double #e4e4e4;
+    margin-left: 180px;
+    margin-right: 150px;
+}
+
+#secondColumn {
+    margin-top: 5px;
+    position: relative;
+}
+
+#secondColumn ul {
+    list-style: none;
+}
+
+#secondColumn ul li {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+}
+
+#secondColumn a {
+    display: block;
+    text-decoration: none;
+    padding-right: 3px;
+    /* text-indent: -10000px; */
+    font-size: 0px;
+    cursor: pointer;
+}
+
+#secondColumn a.viewAll {
+    background: url(viewAll.png);
+    background-repeat: no-repeat;
+    width: 75px;
+    height: 75px;
+}
+
+#secondColumn a.viewAll:hover {
+    background: url(viewAllHover.png);
+    background-repeat: no-repeat;
+    width: 75px;
+    height: 75px;
+}

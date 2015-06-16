@@ -1,0 +1,17 @@
+<%= form_for(@lv_activepower) do |f| %>
+  <% if @lv_activepower.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lv_activepower.errors.count, "error") %> prohibited this lv_activepower from being saved:</h2>
+
+      <ul>
+      <% @lv_activepower.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
